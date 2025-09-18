@@ -1,0 +1,666 @@
+{% load static %}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoftNext | Software Development Experts</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+<script src="{% static 'js/script.js' %}" defer></script>
+
+
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <i class="fas fa-code logo-icon"></i>
+                Soft<span>Next</span>
+            </a>
+            
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            
+            <div class="nav-cta">
+                <a href="#contact" class="btn btn-outline">Get Started</a>
+                <button class="menu-toggle" id="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
+    
+    <div class="mobile-menu" id="mobile-menu">
+        <ul class="mobile-nav-links">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        
+        <div class="mobile-nav-cta">
+            <a href="#contact" class="btn">Get Started</a>
+            <a href="#portfolio" class="btn btn-outline">View Our Work</a>
+        </div>
+        
+        <div class="mobile-menu-contact">
+            <h4>Contact Info</h4>
+            <div class="mobile-contact-info">
+                <p><i class="fas fa-map-marker-alt"></i> Mirpur, Dhaka, Bangladesh</p>
+                <p><i class="fas fa-phone"></i> +880 1627457073</p>
+                <p><i class="fas fa-envelope"></i> info@softnext.com</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-content">
+             <!-- Banner Image -->
+        <div class="hero-banner">
+            <img src="images/003.jpg" alt="" />
+        </div>
+            <h1>Transform Your Ideas Into Digital Reality</h1>
+            <p>We create custom software solutions that drive growth, innovation, and success for businesses worldwide.</p>
+            <div class="hero-buttons">
+                <a href="#portfolio" class="btn btn-accent">View Our Work</a>
+                <a href="#contact" class="btn btn-outline">Get a Free Quote</a>
+            </div>
+            
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <div class="hero-stat-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="hero-stat-content">
+                        <h4>50+</h4>
+                        <p>Projects Completed</p>
+                    </div>
+                </div>
+                
+                <div class="hero-stat">
+                    <div class="hero-stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="hero-stat-content">
+                        <h4>98%</h4>
+                        <p>Client Satisfaction</p>
+                    </div>
+                </div>
+                
+                <div class="hero-stat">
+                    <div class="hero-stat-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="hero-stat-content">
+                        <h4>15+</h4>
+                        <p>Countries Served</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+                <p>We offer end-to-end digital solutions to help your business thrive in the digital age</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Website Development</h3>
+                    <p>Responsive, SEO-friendly websites that convert visitors into customers and drive business growth.</p>
+                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile Apps</h3>
+                    <p>iOS & Android development with native performance, intuitive UX, and cutting-edge features.</p>
+                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Custom Software</h3>
+                    <p>Tailored business solutions that streamline operations and boost productivity.</p>
+                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-pencil-ruler"></i>
+                    </div>
+                    <h3>UI/UX Design</h3>
+                    <p>User-centered designs that enhance experience, engagement, and conversion rates.</p>
+                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Digital Marketing</h3>
+                    <p>Data-driven strategies to increase your online visibility and generate qualified leads.</p>
+                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>Cloud Solutions</h3>
+                    <p>Secure, scalable cloud infrastructure to support your business growth and innovation.</p>
+                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Portfolio</h2>
+                <p>Explore our latest projects and see how we've helped businesses succeed</p>
+            </div>
+            
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web Development</button>
+                <button class="filter-btn" data-filter="app">Mobile Apps</button>
+                <button class="filter-btn" data-filter="ui">UI/UX Design</button>
+            </div>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="web">
+                    <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" alt="E-commerce Website">
+                    <div class="portfolio-overlay">
+                        <h3>E-commerce Website</h3>
+                        <p>Fully responsive online store with payment integration and inventory management</p>
+                        <a href="#" class="btn btn-outline">View Project</a>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="app">
+                    <img src="https://images.unsplash.com/photo-1581276879432-15e50529f34b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Fitness App">
+                    <div class="portfolio-overlay">
+                        <h3>Fitness App</h3>
+                        <p>Mobile application for workout tracking and nutrition planning</p>
+                        <a href="#" class="btn btn-outline">View Project</a>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="web">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Business Dashboard">
+                    <div class="portfolio-overlay">
+                        <h3>Business Dashboard</h3>
+                        <p>Custom analytics platform for enterprise clients with real-time data visualization</p>
+                        <a href="#" class="btn btn-outline">View Project</a>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="ui">
+                    <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1064&q=80" alt="Finance App Design">
+                    <div class="portfolio-overlay">
+                        <h3>Finance App UI</h3>
+                        <p>Modern and intuitive user interface for a financial management application</p>
+                        <a href="#" class="btn btn-outline">View Project</a>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="app">
+                    <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1064&q=80" alt="Travel App">
+                    <div class="portfolio-overlay">
+                        <h3>Travel Companion App</h3>
+                        <p>All-in-one travel application with booking, itinerary, and local guide features</p>
+                        <a href="#" class="btn btn-outline">View Project</a>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="web">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&xiid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1115&q=80" alt="Marketing Platform">
+                    <div class="portfolio-overlay">
+                        <h3>Marketing Platform</h3>
+                        <p>Comprehensive digital marketing platform with automation and analytics</p>
+                        <a href="#" class="btn btn-outline">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container testimonials-container">
+            <div class="section-title">
+                <h2>What Our Clients Say</h2>
+                <p>Hear from businesses that have transformed with our solutions</p>
+            </div>
+            
+            <div class="testimonial-slide">
+                <div class="testimonial-content">
+                    <p>"SoftAgency completely transformed our digital presence. Their team delivered a stunning website and mobile app that has significantly increased our customer engagement and sales. Their attention to detail and professionalism exceeded our expectations."</p>
+                </div>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">
+                        <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Sarah Johnson">
+                    </div>
+                    <div class="testimonial-info">
+                        <h4>Sarah Johnson</h4>
+                        <p>CEO, TechInnovate</p>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-slide">
+                <div class="testimonial-content">
+                    <p>"Working with SoftNext has been a game-changer for our business. Their custom software solution streamlined our operations and saved us countless hours of manual work. The team was responsive, innovative, and delivered on time and within budget."</p>
+                </div>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Chen">
+                    </div>
+                    <div class="testimonial-info">
+                        <h4>Michael Chen</h4>
+                        <p>Operations Director, Global Retail</p>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-slide">
+                <div class="testimonial-content">
+                    <p>"The UI/UX design work SoftNext did for our application was exceptional. They took the time to understand our users and created an intuitive, beautiful interface that our customers love. Our engagement metrics have improved dramatically since the redesign."</p>
+                </div>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Jessica Williams">
+                    </div>
+                    <div class="testimonial-info">
+                        <h4>Jessica Williams</h4>
+                        <p>Product Manager, FinTech Solutions</p>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Why Choose SoftNext?</h2>
+                    <p>We are a team of passionate developers, designers, and problem solvers dedicated to creating software that makes a difference. With years of experience in the industry, we've helped businesses of all sizes achieve their digital goals.</p>
+                    <p>Our approach combines technical expertise with creative thinking to deliver solutions that are not only functional but also delightful to use. We believe in building long-term partnerships with our clients, focusing on their success as our own.</p>
+                    
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number" data-count="150">100</span>
+                            <div class="stat-label">Projects Completed</div>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-count="50">50</span>
+                            <div class="stat-label">Happy Clients</div>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-count="15">15</span>
+                            <div class="stat-label">Team Members</div>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-count="5">5</span>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Our Team">
+                    <div class="about-image-overlay">
+                        <h4>Innovation & Excellence</h4>
+                        <p>We continuously learn and adapt to stay at the forefront of technology trends.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team">
+        <div class="container">
+            <div class="section-title">
+                <h2>Meet Our Team</h2>
+                <p>The talented professionals behind our success</p>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="team-member-img">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="John Smith">
+                    </div>
+                    <div class="team-member-info">
+                        <h3>John Smith</h3>
+                        <p>Lead Developer</p>
+                        <div class="team-member-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="team-member-img">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80" alt="Emily Johnson">
+                    </div>
+                    <div class="team-member-info">
+                        <h3>Emily Johnson</h3>
+                        <p>UI/UX Designer</p>
+                        <div class="team-member-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-dribbble"></i></a>
+                            <a href="#"><i class="fab fa-behance"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="team-member-img">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="David Lee">
+                    </div>
+                    <div class="team-member-info">
+                        <h3>David Lee</h3>
+                        <p>Project Manager</p>
+                        <div class="team-member-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="team-member-img">
+                        <img src="https://images.unsplash.com/photo-1614289371518-722f2615943d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="Sophia Martinez">
+                    </div>
+                    <div class="team-member-info">
+                        <h3>Sophia Martinez</h3>
+                        <p>Marketing Specialist</p>
+                        <div class="team-member-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-pinterest"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+                <p>Find answers to common questions about our services</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How long does a typical project take?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Project timelines vary based on complexity and scope. A simple website may take 4-6 weeks, while a complex custom application could take 3-6 months. During our initial consultation, we'll provide a detailed timeline for your specific project.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Do you provide ongoing support after project completion?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we offer various support and maintenance packages to ensure your software continues to perform optimally. Our packages include regular updates, security monitoring, bug fixes, and technical support.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What technologies do you work with?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We work with a wide range of technologies including JavaScript (React, Angular, Vue), Python (Django, Flask), PHP (Laravel), mobile development (React Native, Flutter, Swift, Kotlin), and various databases and cloud platforms. We choose the best technology stack for each project's specific requirements.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can you work with our existing team?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! We often collaborate with in-house teams, either by augmenting your existing resources or working alongside your team. We're flexible in our approach to ensure seamless collaboration.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What is your pricing model?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We offer flexible pricing models including fixed-price projects for well-defined scope, time and materials for ongoing work, and dedicated team models for long-term partnerships. We'll recommend the best approach based on your project needs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>Get in touch with us for a free consultation and project estimate</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-detail">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Location</h4>
+                            <p>Mirpur, Dhaka, Bangladesh</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-detail">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Phone</h4>
+                            <p>+880 1627457073</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-detail">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Email</h4>
+                            <p>info@softNext.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-detail">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Business Hours</h4>
+                            <p>Monday - Friday: 9AM - 5PM PST</p>
+                        </div>
+                    </div>
+                    
+                    <div class="map" style="width: 100%; height: 250px; border-radius: var(--radius); overflow: hidden; margin-top: 20px;">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100939.98555098464!2d-122.507640204152!3d37.757814996609724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2s!4v1664839965960!5m2!1sen!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" placeholder="John Doe" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" placeholder="john@example.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" placeholder="Project Inquiry" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" placeholder="How can we help you?" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-accent">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container cta-content">
+            <h2>Ready to Start Your Project?</h2>
+            <p>Get in touch with us today and let's discuss how we can help your business grow</p>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn btn-accent">Get a Free Quote</a>
+                <a href="#portfolio" class="btn btn-outline">View Our Work</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>SoftAgency</h3>
+                    <p>We create digital experiences that help businesses grow, innovate, and succeed in the modern world.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Website Development</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Mobile App Development</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Custom Software</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> UI/UX Design</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Digital Marketing</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="#about"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="#portfolio"><i class="fas fa-chevron-right"></i> Portfolio</a></li>
+                        <li><a href="#team"><i class="fas fa-chevron-right"></i> Our Team</a></li>
+                        <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter to get updates on our latest projects and insights.</p>
+                    <form>
+                        <input type="email" placeholder="Your Email Address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2025 SoftNext | All Rights Reserved By SoftNext</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+    {% load static %}
+<script src="{% static 'js/script.js' %}" defer></script>
+
+    
+</body>
+</html>
