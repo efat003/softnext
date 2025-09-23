@@ -12,7 +12,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-i#pk+prp^l=xjik60!d22oog^xt26n9+=jgp*6x#_f))-zwji+'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 # ALLOWED_HOSTS
 ALLOWED_HOSTS = ['softnext.onrender.com', '127.0.0.1', 'localhost', '.onrender.com']
@@ -27,6 +27,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'main',
     'import_export',
+    'ckeditor',  # For rich text editing in admin
 ]
 
 # Middleware
@@ -50,9 +51,11 @@ TEMPLATES = [
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
+                'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'main.context_processors.site_settings',  # Custom context processor
             ],
         },
     },
@@ -104,3 +107,41 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# CKEditor Configuration
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'full',
+        'height': 300,
+        'width': '100%',
+        'extraPlugins': 'codesnippet',
+    },
+}
+
+# Email Configuration (for contact form)
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'  # For development
+# For production, use:
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_HOST = 'your-smtp-host'
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
+# EMAIL_HOST_USER = 'your-email@softnext.com'
+# EMAIL_HOST_PASSWORD = 'your-email-password'
+
+# Security settings for production (commented out for development)
+if not DEBUG:
+    SECURE_BROWSER_XSS_FILTER = True
+    SECURE_CONTENT_TYPE_NOSNIFF = True
+    SECURE_SSL_REDIRECT = True
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
+    X_FRAME_OPTIONS = 'DENY'
+
+# File upload settings
+FILE_UPLOAD_MAX_MEMORY_SIZE = 10485760  # 10MB
+DATA_UPLOAD_MAX_MEMORY_SIZE = 10485760  # 10MB
+
+# Custom admin site header
+ADMIN_SITE_HEADER = "SoftNext Administration"
+ADMIN_SITE_TITLE = "SoftNext Admin Portal"
+ADMIN_INDEX_TITLE = "Welcome to SoftNext Admin Dashboard"

@@ -1,8 +1,4 @@
-
 {% load static %}
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -115,18 +111,19 @@
         }
         
         .btn {
-            display: inline-block;
-            padding: 12px 24px;
-            background: var(--gradient);
-            color: white;
-            border-radius: var(--radius);
-            text-decoration: none;
-            font-weight: 600;
-            transition: var(--transition);
-            border: none;
-            cursor: pointer;
-            box-shadow: 0 4px 15px rgba(67, 97, 238, 0.3);
-        }
+    display: inline-block;
+    padding: clamp(8px, 2vw, 12px) clamp(16px, 4vw, 24px);
+    background: var(--gradient);
+    color: white;
+    border-radius: var(--radius);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(67, 97, 238, 0.3);
+}
+
         
         .btn:hover {
             transform: translateY(-3px);
@@ -551,6 +548,25 @@
         .service-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-image {
+            width: 100%;
+            height: 180px;
+            border-radius: var(--radius);
+            overflow: hidden;
+            margin-bottom: 25px;
+        }
+        
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .service-card:hover .service-image img {
+            transform: scale(1.1);
         }
         
         .service-icon {
@@ -1491,12 +1507,6 @@
             }
         }
     </style>
-
-  <link rel="stylesheet" href="{% static 'css/style.css' %}">
-<script src="{% static 'js/script.js' %}" defer></script>
-
-
-
 </head>
 <body>
     <!-- Navigation -->
@@ -1517,11 +1527,7 @@
             </ul>
             
             <div class="nav-cta">
-
                 <a href="#contact" class="btn">Get Started</a>
-
-                <a href="#contact" class="btn btn-outline">Get Started</a>
-
                 <button class="menu-toggle" id="menu-toggle">
                     <i class="fas fa-bars"></i>
                 </button>
@@ -1533,7 +1539,6 @@
     <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
     
     <div class="mobile-menu" id="mobile-menu">
-
         <div class="mobile-menu-header">
             <a href="#" class="logo">
                 <i class="fas fa-code logo-icon"></i>
@@ -1544,7 +1549,6 @@
             </button>
         </div>
         
-
         <ul class="mobile-nav-links">
             <li><a href="#home" class="active">Home</a></li>
             <li><a href="#services">Services</a></li>
@@ -1562,19 +1566,18 @@
         <div class="mobile-menu-contact">
             <h4>Contact Info</h4>
             <div class="mobile-contact-info">
-                <p><i class="fas fa-map-marker-alt"></i> Mirpur, Dhaka, Bangladesh</p>
+                <p><i class="fas fa-map-marker-alt"></i> Uttara, Dhaka, Bangladesh</p>
                 <p><i class="fas fa-phone"></i> +880 1627457073</p>
                 <p><i class="fas fa-envelope"></i> info@softnext.com</p>
             </div>
         </div>
     </div>
 
-
     <!-- Banner Slider -->
     <div class="banner-slider" id="home">
         <div class="banner-slides" id="banner-slides">
             <div class="banner-slide active">
-                <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80')"></div>
+                <div class="slide-bg" style="background-image: url(static/images/b1.jpg)"></div>
                 <div class="slide-content">
                     <h2>Innovative Software Solutions</h2>
                     <p>We create cutting-edge applications that drive business growth and digital transformation</p>
@@ -1583,7 +1586,7 @@
             </div>
             
             <div class="banner-slide">
-                <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1581276879432-15e50529f34b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')"></div>
+                <div class="slide-bg" style="background-image: url(static/images/b2.jpg)"></div>
                 <div class="slide-content">
                     <h2>Mobile App Excellence</h2>
                     <p>Native and cross-platform mobile applications that deliver exceptional user experiences</p>
@@ -1592,7 +1595,7 @@
             </div>
             
             <div class="banner-slide">
-                <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')"></div>
+                <div class="slide-bg" style="background-image: url(static/images/003.jpg)"></div>
                 <div class="slide-content">
                     <h2>Web Development Mastery</h2>
                     <p>Responsive, SEO-friendly websites that convert visitors into customers</p>
@@ -1601,7 +1604,7 @@
             </div>
             
             <div class="banner-slide">
-                <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1064&q=80')"></div>
+                <div class="slide-bg" style="background-image: url(static/images/s1.jpg)"></div>
                 <div class="slide-content">
                     <h2>Beautiful UI/UX Design</h2>
                     <p>User-centered designs that enhance experience, engagement, and conversion rates</p>
@@ -1626,17 +1629,8 @@
     </div>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="container hero-content">
-
-    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="container hero-content">
-             <!-- Banner Image -->
-        <div class="hero-banner">
-            <img src="images/003.jpg" alt="" />
-        </div>
-
             <h1>Transform Your Ideas Into Digital Reality</h1>
             <p>We create custom software solutions that drive growth, innovation, and success for businesses worldwide.</p>
             <div class="hero-buttons">
@@ -1650,11 +1644,7 @@
                         <i class="fas fa-project-diagram"></i>
                     </div>
                     <div class="hero-stat-content">
-
-                        <h4>150+</h4>
-
                         <h4>50+</h4>
-
                         <p>Projects Completed</p>
                     </div>
                 </div>
@@ -1674,11 +1664,7 @@
                         <i class="fas fa-globe"></i>
                     </div>
                     <div class="hero-stat-content">
-
-                        <h4>25+</h4>
-
                         <h4>15+</h4>
-
                         <p>Countries Served</p>
                     </div>
                 </div>
@@ -1696,6 +1682,9 @@
             
             <div class="services-grid">
                 <div class="service-card">
+                    <div class="service-image">
+                        <img src= "{% static 'images/s3.jpg' %}"alt="Website Development">
+                    </div>
                     <div class="service-icon">
                         <i class="fas fa-laptop-code"></i>
                     </div>
@@ -1705,6 +1694,9 @@
                 </div>
                 
                 <div class="service-card">
+                    <div class="service-image">
+                        <img src="{% static 'images/a1.jpg' %}" alt="Mobile Apps">
+                    </div>
                     <div class="service-icon">
                         <i class="fas fa-mobile-alt"></i>
                     </div>
@@ -1714,6 +1706,9 @@
                 </div>
                 
                 <div class="service-card">
+                    <div class="service-image">
+                        <img src="{% static 'images/d1.jpg' %}" alt="Custom Software">
+                    </div>
                     <div class="service-icon">
                         <i class="fas fa-cogs"></i>
                     </div>
@@ -1723,6 +1718,9 @@
                 </div>
                 
                 <div class="service-card">
+                    <div class="service-image">
+                        <img src="{% static 'images/4.jpg' %}" alt="UI/UX Design">
+                    </div>
                     <div class="service-icon">
                         <i class="fas fa-pencil-ruler"></i>
                     </div>
@@ -1732,6 +1730,9 @@
                 </div>
                 
                 <div class="service-card">
+                    <div class="service-image">
+                        <img src="{% static 'images/b1.jpg' %}" alt="Digital Marketing">
+                    </div>
                     <div class="service-icon">
                         <i class="fas fa-chart-line"></i>
                     </div>
@@ -1741,6 +1742,9 @@
                 </div>
                 
                 <div class="service-card">
+                    <div class="service-image">
+                        <img src="{% static 'images/004.jpg' %}" alt="Cloud Solutions">
+                    </div>
                     <div class="service-icon">
                         <i class="fas fa-cloud"></i>
                     </div>
@@ -1769,7 +1773,7 @@
             
             <div class="portfolio-grid">
                 <div class="portfolio-item" data-category="web">
-                    <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" alt="E-commerce Website">
+                    <img src="{% static 'images/e5.jpg' %}" alt="E-commerce Website">
                     <div class="portfolio-overlay">
                         <h3>E-commerce Website</h3>
                         <p>Fully responsive online store with payment integration and inventory management</p>
@@ -1778,7 +1782,7 @@
                 </div>
                 
                 <div class="portfolio-item" data-category="app">
-                    <img src="https://images.unsplash.com/photo-1581276879432-15e50529f34b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Fitness App">
+                    <img src="{% static 'images/b2.jpg' %}" alt="Fitness App">
                     <div class="portfolio-overlay">
                         <h3>Fitness App</h3>
                         <p>Mobile application for workout tracking and nutrition planning</p>
@@ -1787,7 +1791,7 @@
                 </div>
                 
                 <div class="portfolio-item" data-category="web">
-                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Business Dashboard">
+                    <img src="{% static 'images/004.jpg' %}" alt="Business Dashboard">
                     <div class="portfolio-overlay">
                         <h3>Business Dashboard</h3>
                         <p>Custom analytics platform for enterprise clients with real-time data visualization</p>
@@ -1796,7 +1800,7 @@
                 </div>
                 
                 <div class="portfolio-item" data-category="ui">
-                    <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1064&q=80" alt="Finance App Design">
+                    <img src="{% static 'images/b1.jpg' %}" alt="Finance App Design">
                     <div class="portfolio-overlay">
                         <h3>Finance App UI</h3>
                         <p>Modern and intuitive user interface for a financial management application</p>
@@ -1805,7 +1809,7 @@
                 </div>
                 
                 <div class="portfolio-item" data-category="app">
-                    <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1064&q=80" alt="Travel App">
+                    <img src="{% static 'images/c1.jpg' %}" alt="Travel App">
                     <div class="portfolio-overlay">
                         <h3>Travel Companion App</h3>
                         <p>All-in-one travel application with booking, itinerary, and local guide features</p>
@@ -1814,7 +1818,7 @@
                 </div>
                 
                 <div class="portfolio-item" data-category="web">
-                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&xiid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1115&q=80" alt="Marketing Platform">
+                    <img src="{% static 'images/d1.jpg' %}" alt="Marketing Platform">
                     <div class="portfolio-overlay">
                         <h3>Marketing Platform</h3>
                         <p>Comprehensive digital marketing platform with automation and analytics</p>
@@ -1833,7 +1837,6 @@
                 <p>Hear from businesses that have transformed with our solutions</p>
             </div>
             
-
             <div class="testimonial-slider">
                 <div class="testimonial-track" id="testimonial-track">
                     <div class="testimonial-slide">
@@ -1916,71 +1919,6 @@
                     <div class="slider-dot active" data-index="0"></div>
                     <div class="slider-dot" data-index="1"></div>
                     <div class="slider-dot" data-index="2"></div>
-
-            <div class="testimonial-slide">
-                <div class="testimonial-content">
-                    <p>"SoftAgency completely transformed our digital presence. Their team delivered a stunning website and mobile app that has significantly increased our customer engagement and sales. Their attention to detail and professionalism exceeded our expectations."</p>
-                </div>
-                <div class="testimonial-author">
-                    <div class="testimonial-avatar">
-                        <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Sarah Johnson">
-                    </div>
-                    <div class="testimonial-info">
-                        <h4>Sarah Johnson</h4>
-                        <p>CEO, TechInnovate</p>
-                        <div class="testimonial-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="testimonial-slide">
-                <div class="testimonial-content">
-                    <p>"Working with SoftNext has been a game-changer for our business. Their custom software solution streamlined our operations and saved us countless hours of manual work. The team was responsive, innovative, and delivered on time and within budget."</p>
-                </div>
-                <div class="testimonial-author">
-                    <div class="testimonial-avatar">
-                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Chen">
-                    </div>
-                    <div class="testimonial-info">
-                        <h4>Michael Chen</h4>
-                        <p>Operations Director, Global Retail</p>
-                        <div class="testimonial-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="testimonial-slide">
-                <div class="testimonial-content">
-                    <p>"The UI/UX design work SoftNext did for our application was exceptional. They took the time to understand our users and created an intuitive, beautiful interface that our customers love. Our engagement metrics have improved dramatically since the redesign."</p>
-                </div>
-                <div class="testimonial-author">
-                    <div class="testimonial-avatar">
-                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Jessica Williams">
-                    </div>
-                    <div class="testimonial-info">
-                        <h4>Jessica Williams</h4>
-                        <p>Product Manager, FinTech Solutions</p>
-                        <div class="testimonial-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </div>
@@ -1997,11 +1935,7 @@
                     
                     <div class="about-stats">
                         <div class="stat">
-
-                            <span class="stat-number" data-count="150">150</span>
-
-                            <span class="stat-number" data-count="150">100</span>
-
+                            <span class="stat-number" data-count="100">100</span>
                             <div class="stat-label">Projects Completed</div>
                         </div>
                         <div class="stat">
@@ -2041,25 +1975,25 @@
             <div class="team-grid">
                 <div class="team-member">
                     <div class="team-member-img">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="John Smith">
+                        <img src="{% static 'images/t3.jpg' %}" alt="Efat">
                     </div>
                     <div class="team-member-info">
-                        <h3>John Smith</h3>
-                        <p>Lead Developer</p>
+                        <h3>Efat Sarkar</h3>
+                        <p>Web Developer</p>
                         <div class="team-member-social">
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/efat-sarker-983a71310/"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.instagram.com/efat_003/"><i class="fab fa-instagram"></i></a>
+                            <a href="https://github.com/efat003"><i class="fab fa-github"></i></a>
                         </div>
                     </div>
                 </div>
                 
                 <div class="team-member">
                     <div class="team-member-img">
-                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80" alt="Emily Johnson">
+                        <img src="{% static 'images/t4.jpg' %}" alt="Efat">
                     </div>
                     <div class="team-member-info">
-                        <h3>Emily Johnson</h3>
+                        <h3>Sara Khan</h3>
                         <p>UI/UX Designer</p>
                         <div class="team-member-social">
                             <a href="#"><i class="fab fa-linkedin-in"></i></a>
@@ -2071,10 +2005,10 @@
                 
                 <div class="team-member">
                     <div class="team-member-img">
-                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="David Lee">
+                         <img src="{% static 'images/t1.jpg' %}" alt="Efat">
                     </div>
                     <div class="team-member-info">
-                        <h3>David Lee</h3>
+                        <h3>Hasib Ahmed</h3>
                         <p>Project Manager</p>
                         <div class="team-member-social">
                             <a href="#"><i class="fab fa-linkedin-in"></i></a>
@@ -2086,10 +2020,10 @@
                 
                 <div class="team-member">
                     <div class="team-member-img">
-                        <img src="https://images.unsplash.com/photo-1614289371518-722f2615943d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="Sophia Martinez">
+                        <img src="{% static 'images/t2.jpg' %}" alt="Efat">
                     </div>
                     <div class="team-member-info">
-                        <h3>Sophia Martinez</h3>
+                        <h3>Rafin Hasan</h3>
                         <p>Marketing Specialist</p>
                         <div class="team-member-social">
                             <a href="#"><i class="fab fa-linkedin-in"></i></a>
@@ -2180,7 +2114,7 @@
                         </div>
                         <div class="contact-text">
                             <h4>Location</h4>
-                            <p>Mirpur, Dhaka, Bangladesh</p>
+                            <p>Uttara, Dhaka, Bangladesh</p>
                         </div>
                     </div>
                     
@@ -2200,11 +2134,7 @@
                         </div>
                         <div class="contact-text">
                             <h4>Email</h4>
-
                             <p>info@softnext.com</p>
-
-                            <p>info@softNext.com</p>
-
                         </div>
                     </div>
                     
@@ -2219,11 +2149,7 @@
                     </div>
                     
                     <div class="map" style="width: 100%; height: 250px; border-radius: var(--radius); overflow: hidden; margin-top: 20px;">
-
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d116834.00977782025!2d90.34928585544384!3d23.78077774445441!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8b087026b81%3A0x8fa563bbdd5904c2!2sDhaka!5e0!3m2!1sen!2sbd!4v1727907232822!5m2!1sen!2sbd" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100939.98555098464!2d-122.507640204152!3d37.757814996609724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2s!4v1664839965960!5m2!1sen!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
                     </div>
                 </div>
                 
@@ -2245,11 +2171,7 @@
                     
                     <div class="form-group">
                         <label for="message">Your Message</label>
-
                         <textarea id="message" placeholder="How can we help you?" rows="5" required></textarea>
-
-                        <textarea id="message" placeholder="How can we help you?" required></textarea>
-
                     </div>
                     
                     <button type="submit" class="btn btn-accent">Send Message</button>
@@ -2275,17 +2197,13 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-col">
-
                     <h3>SoftNext</h3>
-
-                    <h3>SoftNext</h3>
-
                     <p>We create digital experiences that help businesses grow, innovate, and succeed in the modern world.</p>
                     <div class="social-links">
+                        <a href="https://www.instagram.com/efat_003/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/efat-sarker-983a71310/"><i class="fab fa-linkedin-in"></i></a>
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
                 
@@ -2322,7 +2240,7 @@
             </div>
             
             <div class="footer-bottom">
-                <p>© 2025 SoftNext | All Rights Reserved By SoftNext</p>
+                <p>© 2025 SoftNext | All Rights Reserved By Efat Sarkar.</p>
             </div>
         </div>
     </footer>
@@ -2331,7 +2249,6 @@
     <a href="#" class="back-to-top" id="backToTop">
         <i class="fas fa-arrow-up"></i>
     </a>
-
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -2537,10 +2454,7 @@
                         clearInterval(timer);
                     } else {
                         el.textContent = Math.floor(current);
-                        el.style.opacity = (current / target) + 0.3;
-                        el.style.transform = `scale(${0.8 + (current / target) * 0.2})`;
-                        el.style.color = `rgba(67, 97, 238, ${0.5 + (current / target) * 0.5})`;
-                        }
+                    }
                 }, stepTime);
             }
 
@@ -2625,11 +2539,6 @@
                 });
             });
         });
-            </script>
-    {% load static %}
-<script src="{% static 'js/script.js' %}" defer></script>
-
-    
-
+    </script>
 </body>
 </html>
